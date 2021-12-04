@@ -1,0 +1,23 @@
+OrGate:
+  column: "Logic"
+  prefab:
+    blocks:
+      -
+        scale: (1, 1, 1)
+        color: (83, 35, 163)
+    inputs:
+      -
+        position: (-0.25, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+        length: 0.6
+      -
+        position: (0.25, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+        length: 0.6
+    outputs:
+      -
+        position: (0, 0.5, 0.5)
+        rotation: (90, 0, 0)
+  logicCode: sm.OrGate
+  placingRules:
+    gridPlacingDimensions: (1, 2)
