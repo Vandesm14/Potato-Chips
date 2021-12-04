@@ -1,7 +1,7 @@
 using LICC;
 using LogicAPI.Client;
 
-namespace SmMod
+namespace SvMod
 {
-    class SmClientMod : ClientMod {}
+    class SvClientMod : ClientMod {}
 }
