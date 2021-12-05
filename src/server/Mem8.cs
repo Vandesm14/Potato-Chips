@@ -205,6 +205,24 @@ namespace potatochips {
     private bool edge = false; // saves the last clock edge
     private byte[] mem = new byte[256]; // memory
 
+    protected override byte[] SerializeCustomData() {
+      Logger.Info("Serializing custom data");
+      return mem;
+    }
+
+    protected override void DeserializeData(byte[] data) {
+      Logger.Info("Deserializing memory");
+      if (data != null && data.Length == 256) {
+        data.CopyTo(mem, 0);
+        Logger.Info("Memory deserialized");
+      } else {
+        Logger.Error("Invalid memory data...");
+        // convert data to a string and log it
+        bool dataExists = data != null;
+        Logger.Error("Data exists: " + dataExists);
+      }
+    }
+
     protected override void DoLogicUpdate() {
       if (_clk) {
         if (edge == false) {
