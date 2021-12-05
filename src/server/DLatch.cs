@@ -1,7 +1,7 @@
 using LogicAPI.Server.Components;
 using LogicLog;
 
-namespace sv {
+namespace potatochips {
   public class DLatch : LogicComponent {
     private bool _data {
       get {

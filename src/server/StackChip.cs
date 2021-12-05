@@ -1,7 +1,7 @@
 using LogicAPI.Server.Components;
 using LogicLog;
 
-namespace sv {
+namespace potatochips {
   public class StackChip : LogicComponent {
     private bool _prev {
       get {

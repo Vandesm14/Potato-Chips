@@ -1,7 +1,7 @@
 using LogicAPI.Server.Components;
 using LogicLog;
 
-namespace sv {
+namespace potatochips {
   public class Mem8 : LogicComponent {
     private bool _clk {
       get {

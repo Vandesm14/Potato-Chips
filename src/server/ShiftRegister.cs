@@ -2,7 +2,7 @@ using LogicAPI.Server.Components;
 using LogicLog;
 using System;
 
-namespace sv {
+namespace potatochips {
   public class ShiftRegister : LogicComponent {
     private bool _clk {
       get {
