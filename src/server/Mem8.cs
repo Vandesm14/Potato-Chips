@@ -1,8 +1,12 @@
-using LogicAPI.Server.Components;
+using LogicWorld.Server.Circuitry;
 using LogicLog;
 
 namespace potatochips {
-  public class Mem8 : LogicComponent {
+  public class Mem8 : LogicComponent<Mem8.IData> {
+    public interface IData {
+      byte[] mem { get; set; }
+    }
+
     private bool _clk {
       get {
         return base.Inputs[0].On;
@@ -174,7 +178,7 @@ namespace potatochips {
       }
     }
 
-    public byte Data {
+    public byte Input {
       get {
         return (byte)(
           (this._data0 ? 1 : 0) |
@@ -203,38 +207,26 @@ namespace potatochips {
     }
 
     private bool edge = false; // saves the last clock edge
-    private byte[] mem = new byte[256]; // memory
-
-    protected override byte[] SerializeCustomData() {
-      Logger.Info("Serializing custom data");
-      return mem;
-    }
-
-    protected override void DeserializeData(byte[] data) {
-      Logger.Info("Deserializing memory");
-      if (data != null && data.Length == 256) {
-        data.CopyTo(mem, 0);
-        Logger.Info("Memory deserialized");
-      } else {
-        Logger.Error("Invalid memory data...");
-        // convert data to a string and log it
-        bool dataExists = data != null;
-        Logger.Error("Data exists: " + dataExists);
-      }
-    }
 
     protected override void DoLogicUpdate() {
       if (_clk) {
         if (edge == false) {
           edge = true;
           if (_we) {
-            mem[Addr] = Data;
+            Data.mem[Addr] = Input;
           }
-          Out = mem[Addr];
+          Out = Data.mem[Addr];
         }
       } else {
         edge = false;
       }
+    }
+
+    private bool _HasPersistentValues = true;
+    public override bool HasPersistentValues => _HasPersistentValues;
+
+    protected override void SetDataDefaultValues() {
+      Data.mem = new byte[256];
     }
   }
 }
