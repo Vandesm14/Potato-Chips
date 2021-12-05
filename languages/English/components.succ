@@ -1,2 +1,4 @@
 sv.OrGate: "OR Gate"
 sv.BfChip: "Bf Chip"
+sv.StackChip: "Stack Chip"
+sv.ShiftRegister: "Shift Register"

@@ -22,89 +22,63 @@ OrGate:
   placingRules:
     gridPlacingDimensions: (1, 2)
 
-BfChip:
-  column: "Chip"
+StackChip:
+  column: "Logic"
   prefab:
     blocks:
       -
-        scale: (5, 1, 2)
+        scale: (2, 1, 1)
         color: 181818
     inputs:
-      - # pin 1
-        position: (-2, 0.5, -1)
+      - # prev
+        position: (-0.75, 0.5, -0.5)
         rotation: (-90, 0, 0)
         length: 0.6
-      - # pin 2
-        position: (-1.5, 0.5, -1)
+      - # next
+        position: (-0.25, 0.5, -0.5)
         rotation: (-90, 0, 0)
         length: 0.6
-      - # pin 3
-        position: (-1, 0.5, -1)
+      - # write
+        position: (0.25, 0.5, -0.5)
         rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 4
-        position: (-0.5, 0.5, -1)
+        length: 0.5
+      - # data
+        position: (0.75, 0.5, -0.5)
         rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 5
-        position: (0, 0.5, -1)
-        rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 6
-        position: (0.5, 0.5, -1)
-        rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 7
-        position: (1, 0.5, -1)
-        rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 8
-        position: (1.5, 0.5, -1)
-        rotation: (-90, 0, 0)
-        length: 0.6
-      - # pin 9
-        position: (2, 0.5, -1)
-        rotation: (-90, 0, 0)
-        length: 0.6
-
-      - # pin 10
-        position: (-2, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-
+        length: 0.5
     outputs:
-      - # pin 11
-        position: (-1.5, 0.5, 1)
+      - # output
+        position: (0, 0.5, 0.5)
+        rotation: (90, 0, 0)
+  logicCode: sv.StackChip
+
+ShiftRegister:
+  column: "Logic"
+  prefab:
+    blocks:
+      -
+        scale: (4, 1, 1)
+        color: 181818
+    inputs:
+      - # clk
+        position: (-1.5, 0.5, 0.5)
         rotation: (90, 0, 0)
         length: 0.6
-      - # pin 12
-        position: (-1, 0.5, 1)
+      - # data
+        position: (-0.5, 0.5, 0.5)
         rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 13
-        position: (-0.5, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 14
-        position: (0, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 15
-        position: (0.5, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 16
-        position: (1, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 17
-        position: (1.5, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-      - # pin 18
-        position: (2, 0.5, 1)
-        rotation: (90, 0, 0)
-        length: 0.6
-  logicCode: sv.BfChip
-  # placingRules:
-  #   gridPlacingDimensions: (1, 2)
+        length: 0.5
+    outputs:
+      - # data_0
+        position: (-1.5, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+      - # data_1
+        position: (-0.5, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+      - # data_2
+        position: (0.5, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+      - # data_3
+        position: (1.5, 0.5, -0.5)
+        rotation: (-90, 0, 0)
+  logicCode: sv.ShiftRegister
