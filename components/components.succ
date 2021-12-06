@@ -1,5 +1,6 @@
 ShiftRegister:
   column: "Logic"
+  category: "PotatoChips"
   prefab:
     blocks:
       -
@@ -31,6 +32,7 @@ ShiftRegister:
 
 DLatch:
   column: "Logic"
+  category: "PotatoChips"
   prefab:
     blocks:
       -
@@ -55,6 +57,7 @@ DLatch:
 
 Mem8:
   column: "Chip"
+  category: "PotatoChips"
   prefab:
     blocks:
       -

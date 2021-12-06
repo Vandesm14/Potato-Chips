@@ -1,3 +1,6 @@
+ComponentColumn.Chip: "Chip"
+ComponentCategory.PotatoChips: "Potato Chips"
+
 potatochips.ShiftRegister: "Shift Register"
 potatochips.DLatch: "D Latch (Real)"
 potatochips.Mem8: "8-bit Memory"
