@@ -159,3 +159,51 @@ Mem8:
         position: (2.5, 0.5, 1)
         rotation: (90, 0, 0)
   logicCode: potatochips.Mem8
+
+HexDisplay:
+  column: "Logic"
+  prefab:
+    blocks:
+      -
+        scale: (7, 1, 2)
+        color: 181818
+    inputs:
+      - # data0
+        position: (-3, 0.5, -1)
+        rotation: (-90, 0, 0)
+        length: 0.6
+      - # data1
+        position: (-2.5, 0.5, -1)
+        rotation: (-90, 0, 0)
+        length: 0.6
+      - # data2
+        position: (-2, 0.5, -1)
+        rotation: (-90, 0, 0)
+        length: 0.6
+      - # data3
+        position: (-1.5, 0.5, -1)
+        rotation: (-90, 0, 0)
+        length: 0.6
+    outputs:
+      - # out0
+        position: (-3, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out1
+        position: (-2, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out2
+        position: (-1, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out3
+        position: (0, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out4
+        position: (1, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out5
+        position: (2, 0.5, 1)
+        rotation: (90, 0, 0)
+      - # out6
+        position: (3, 0.5, 1)
+        rotation: (90, 0, 0)
+  logicCode: potatochips.HexDisplay

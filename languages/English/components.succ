@@ -1,3 +1,4 @@
 potatochips.ShiftRegister: "Shift Register"
 potatochips.DLatch: "D Latch (Real)"
 potatochips.Mem8: "8-bit Memory"
+potatochips.HexDisplay: "Hex Display Chip"
