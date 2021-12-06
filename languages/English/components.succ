@@ -1,4 +1,3 @@
-potatochips.StackChip: "Stack Chip"
 potatochips.ShiftRegister: "Shift Register"
-potatochips.DLatch: "DLatch"
+potatochips.DLatch: "D Latch (Real)"
 potatochips.Mem8: "8-bit Memory"
