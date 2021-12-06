@@ -50,16 +50,22 @@ namespace potatochips {
     }
 
     private bool[] mem = new bool[4];
+    private bool edge = false;
 
     protected override void DoLogicUpdate() {
       if (_clk) {
-        mem[0] = mem[1];
-        mem[1] = mem[2];
-        mem[2] = mem[3];
-        mem[3] = _data;
-      }
+        if (edge == false) {
+          edge = true;
+          mem[0] = mem[1];
+          mem[1] = mem[2];
+          mem[2] = mem[3];
+          mem[3] = _data;
+        } else {
+          edge = false;
+        }
 
-      _out = (mem[0] ? 8 : 0) + (mem[1] ? 4 : 0) + (mem[2] ? 2 : 0) + (mem[3] ? 1 : 0);
+        _out = (mem[0] ? 8 : 0) + (mem[1] ? 4 : 0) + (mem[2] ? 2 : 0) + (mem[3] ? 1 : 0);
+      }
     }
   }
 }
