@@ -1,6 +1,6 @@
 ComponentCategory.PotatoChips: "Potato Chips"
 
 potatochips.ShiftRegister: "Shift Register"
-potatochips.DLatch: "D Latch (Real)"
+potatochips.DLatch: "D Flip-Flop"
 potatochips.Mem8: "8-bit Memory"
 potatochips.HexDisplay: "Hex Display Chip"
