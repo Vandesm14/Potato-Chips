@@ -63,7 +63,6 @@ namespace potatochips {
         } else {
           edge = false;
         }
-
         _out = (mem[0] ? 8 : 0) + (mem[1] ? 4 : 0) + (mem[2] ? 2 : 0) + (mem[3] ? 1 : 0);
       }
     }
